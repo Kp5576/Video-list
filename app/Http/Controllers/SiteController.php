@@ -57,13 +57,7 @@ class SiteController extends Controller
 
     public function videoindex($id = null){
 
-        $data =   Video::all();
-        foreach($data as $dta){
-            $dta;
-        }
-            if($data){
-        return view('quote.video' , ['dta' => $dta]);
-         }
+       
             return view('quote.video');
     }
 

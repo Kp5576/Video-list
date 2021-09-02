@@ -106,11 +106,7 @@
 
                                         <input  type="file" id="txtVideo" class=" form-control txtRequired" name="video">
 
-                                      <?php  $url = asset("public/video/$dta->video");  ?>
-
-                                                                        <video width="70" height="100" align="center">
-                                                                        <source src=' {{ $url }} '>
-                                                                            </video>
+                                     
                                     </div>
                                 </div>
                                 <div class="col-md-6">
