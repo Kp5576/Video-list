@@ -61,7 +61,7 @@ class SiteController extends Controller
         foreach($data as $dta){
             $dta;
         }
-            if($dta){
+            if($data){
         return view('quote.video' , ['dta' => $dta]);
          }
             return view('quote.video');
