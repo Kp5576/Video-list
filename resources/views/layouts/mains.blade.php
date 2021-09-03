@@ -12,45 +12,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
 
-  <!-- Scripts -->
-        <!--<script src="./js/app.js" defer></script>-->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-
-        <link href="./css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
-        <link href="./css/components.css" rel="stylesheet" type="text/css">
-
-
-        <!-- Global stylesheets -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-
-
-
-        <!-- /global stylesheets -->
-
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-        <!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-        <!-- Lineawesome CSS -->
-        <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
-        <!-- Chart CSS -->
-
-
-        <!-- Datatable CSS -->
-        <link rel="stylesheet" href="./assets/css/dataTables.bootstrap4.min.css">
-
-        <link rel="stylesheet" href="./assets/plugins/morris/morris.css">
-        <!-- Select2 CSS -->
-        <link rel="stylesheet" href="./assets/css/select2.min.css">
-
-        <!-- Main CSS -->
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <!-- Datetimepicker CSS -->
-        <link rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css">
-
-
+ 
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
