@@ -15,16 +15,14 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $faker = Faker::create();
 
-        foreach (range(1,200) as $index) {
             DB::table('video')->insert([
-                'video' => $faker->video,
-                'name' => $faker->name,
-                'title' => $faker->title,
-                'duration' => $faker->duration,
-              
+                'video' => '293775338.mp4',
+                'name' => 'kuldeep',
+                'title' => 'title',
+                'duration' => 'duration',
+
             ]);
-        }
+
     }
 }
