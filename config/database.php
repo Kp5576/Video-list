@@ -63,14 +63,14 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
+          'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => 'postgres://yrjdpxbtvslkfg:1980ffa0a803b1fcd5656d84f500c039dec304f1c72b64590fcf79e4d6c7cefe@ec2-54-147-93-73.compute-1.amazonaws.com:5432/dtgpj3geh2j0d',
+            'host' => 'ec2-54-147-93-73.compute-1.amazonaws.com',
+            'port' => '5432',
+            'database' => 'dtgpj3geh2j0d',
+            'username' => 'yrjdpxbtvslkfg',
+            'password' => '1980ffa0a803b1fcd5656d84f500c039dec304f1c72b64590fcf79e4d6c7cefe',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
