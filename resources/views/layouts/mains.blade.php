@@ -52,44 +52,8 @@
         <!-- Datetimepicker CSS -->
         <link rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css">
 
+      
 
-        <!-- Core JS files -->
-        <script type="text/javascript" src="./js/plugins/loaders/pace.min.js"></script>
-        <script type="text/javascript" src="./js/core/libraries/bootstrap.min.js"></script>
-        <script type="text/javascript" src="./js/plugins/loaders/blockui.min.js"></script>
-        <!-- /core JS files -->
-
-
-        <!-- Theme JS files -->
-
-        <script type="text/javascript" src="./js/plugins/pickers/datepicker.js"></script>
-
-        <!-- Bootstrap Core JS -->
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-
-        <!-- Slimscroll JS -->
-        <script src="./assets/js/jquery.slimscroll.min.js"></script>
-
-        <!-- Chart JS -->
-        <script src="./assets/plugins/morris/morris.min.js"></script>
-        <script src="./assets/plugins/raphael/raphael.min.js"></script>
-        <!-- Select2 JS -->
-        <script src="./assets/js/select2.min.js"></script>
-
-        <!-- Datetimepicker JS -->
-        <script src="./assets/js/moment.min.js"></script>
-        <script src="./assets/js/bootstrap-datetimepicker.min.js"></script>
-
-        <!-- Custom JS -->
-        <script src="./assets/js/app.js"></script>
-
-        <!--<script type="text/javascript" src="./js/pages/dashboard.js"></script>-->
-        <!-- /theme JS files -->
-
-        <!-- Datatable JS -->
-        <script src="./assets/js/jquery.dataTables.min.js"></script>
-        <script src="./assets/js/dataTables.bootstrap4.min.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
         <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
