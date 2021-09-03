@@ -106,13 +106,13 @@
 
                                         <input  type="file" id="txtVideo" class=" form-control txtRequired" name="video">
 
-                                      
+
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Name <span class="text-danger">*</span></label>
-                                        <input name="name" id="txtName" class="form-control txtRequired" type="text">
+                                        <input name="name" id="name" class="form-control txtRequired" type="text">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -197,8 +197,8 @@ function editData(VL_id) {
         if (table.row(i).data().id == VL_id) {
             arrDT = table.row(i).data();
             $("#txtID").val(table.row(i).data().id);
-            $("#txtideo").val(table.row(i).data().video);
-            $("#txtName").val(table.row(i).data().name);
+
+            $("#name").val(table.row(i).data().name);
             $("#title").val(table.row(i).data().title);
             $("#duration").val(table.row(i).data().duration);
 
@@ -262,16 +262,6 @@ function showModelForm(VL_act = 0) {
     }
     $('#modalDate').modal('show');
 }
-
-$('#txtHolidayDate').datetimepicker({
-    format: 'YYYY-MM-DD',
-    icons: {
-        up: "fa fa-angle-up",
-        down: "fa fa-angle-down",
-        next: 'fa fa-angle-right',
-        previous: 'fa fa-angle-left'
-    }
-});
 </script>
 
 
