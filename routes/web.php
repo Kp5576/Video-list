@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +34,6 @@ Route::get('/quote/load_data','SiteController@quote_data');
 
 Route::get('quote-add','SiteController@redrit')->name('quote-add');
 
-}); 
+});
+
+Route::get('students/list', [SiteController::class, 'quote_data'])->name('students.list');

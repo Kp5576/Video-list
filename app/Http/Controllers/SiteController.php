@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use App\Quote;
 use App\Video;
-use Yajra\Datatables\Datatables;
 use App\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Hash;
+use DataTables;
 
 
 class SiteController extends Controller
@@ -57,11 +57,11 @@ class SiteController extends Controller
 
     public function videoindex($id = null){
 
-       
+
             return view('quote.video');
     }
 
-    public function quote_update(Request $request ,$id = null)
+   public function quote_update(Request $request ,$id = null)
     {
                  $data = $request->all();
                   $VL_id =   $data['id'];
@@ -150,32 +150,28 @@ class SiteController extends Controller
         return $id;
     }
 
-    public function quote_data(Datatables $datatables) {
+    public function quote_data(Request $request) {
           //   $items = Quote::select('quote.*');
-        $items = Video::select('id','video','name','title','duration');
+        if ($request->ajax()) {
+            $data = Video::latest()->get();
 
-        return $datatables->eloquent($items)
-                       ->addColumn('video', function ($data) {
-                            $url = asset("public/video/$data->video");
-                            return '
-                                    <video width="200" height="100" align="center" controls>
-                                    <source src=' . $url . ' >
-                                      </video>';
-                        })
-        ->addColumn('action', function ($data) {
+            return Datatables::of($data)
+                ->addIndexColumn()
+                 ->addColumn('video', function ($row) {
+                            $url = asset("public/video/$row->video");
+                            $video = '<video width="200" height="100" align="center" controls><source src=' . $url . ' ></video>';
+                             return $video;
 
-                            return '<div class="dropdown dropdown-action">
-                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" onclick="editData('.$data->id.')"  href="javascript:;"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                            <a class="dropdown-item btn-delete" href="#" data-remote="' . route('quote_delete', ['id' => $data->id]) . '"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                            </div>
-                        </div>';
                         })
-                        ->rawColumns(['video', 'name', 'title', 'duration', 'action'])
-                        ->make(true);
+                ->addColumn('action', function($row){
+                    $actionBtn = '<a class="edit btn btn-success btn-sm" onclick="editData('.$row->id.')"  href="javascript:;"><i class="fa fa-pencil m-r-5"></i> Edit</a> <a href="#" class="delete btn btn-danger btn-sm" data-remote="' . route('quote_delete', ['id' => $row->id]) . '"><i class="fa fa-trash-o m-r-5"></i> Delete</a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['video','action'])
+                ->make(true);
+        }
     }
-    
+
     public function quote_form(Request $request) {
         $arrRules = array(
             'name'=>'required',
@@ -186,11 +182,11 @@ class SiteController extends Controller
         );
         $this->validate(request(),$arrRules);
          $objRequest=$request->all();
-         
+
          Quote::create($objRequest);
          return redirect()->route('site');
     }
-    
+
         public function quote_add(Request $request) {
         $arrRules = array(
             'name'=>'required',

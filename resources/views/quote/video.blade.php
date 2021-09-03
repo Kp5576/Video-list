@@ -106,7 +106,7 @@
 
                                         <input  type="file" id="txtVideo" class=" form-control txtRequired" name="video">
 
-                                     
+                                      
                                     </div>
                                 </div>
                                 <div class="col-md-6">
