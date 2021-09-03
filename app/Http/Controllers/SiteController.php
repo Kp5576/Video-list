@@ -8,10 +8,13 @@ use App\Video;
 use App\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Hash;
 use DataTables;
+use FideloperProxyTrustProxies as Middleware;
 
 
 class SiteController extends Controller
 {
+    protected $proxies = '*';
+    protected $headers = Request:: HEADER_X_FORWARDED_AWS_ELB;
 
     
     public function quote_index(){
