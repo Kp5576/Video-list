@@ -18,9 +18,7 @@
 
         <link href="./css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
         <link href="./css/components.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
-        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
 
         <!-- Global stylesheets -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -52,7 +50,7 @@
         <!-- Datetimepicker CSS -->
         <link rel="stylesheet" href="./assets/css/bootstrap-datetimepicker.min.css">
 
-      
+
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
