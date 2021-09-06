@@ -15,12 +15,12 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/n', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
-Route::get('/', 'SiteController@videoindex');
+Route::get('/n', 'SiteController@videoindex');
 
 Route::post('/ajax_upload/action', 'SiteController@quote_update')->name('ajaxupload.action');
 
@@ -37,3 +37,7 @@ Route::get('quote-add','SiteController@redrit')->name('quote-add');
 });
 
 Route::get('students/list', [SiteController::class, 'quote_data'])->name('students.list');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
